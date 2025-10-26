@@ -37,7 +37,7 @@ A full-stack Weather Dashboard built with FastAPI (backend) and React (frontend)
 ### 📁 Clone the Repository
 
 ```bash
-git clone https://github.com/yashvidotdev/weather-dashboard.git
+git clone URL
 cd weather-dashboard
 ````
 
