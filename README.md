@@ -116,37 +116,4 @@ uvicorn app.main:app --reload
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions to improve this project!
-
-### 📌 How to Contribute
-
-1. Fork the repository.
-2. Create a new branch:
-
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Make your changes and commit:
-
-   ```bash
-   git commit -m "Add: feature-name"
-   ```
-4. Push to your branch:
-
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a **Pull Request** with a clear description.
-
-Please create a PR even for small changes (e.g., UI tweaks or minor refactors).
-
----
-
-## 📩 Contact
-
-For collaboration or queries, reach out via [GitHub Issues](https://github.com/yashvidotdev/weather-dashboard/issues).
-
----
 
