@@ -1,0 +1,246 @@
+/* Modern Weather Dashboard Styles */
+
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.App h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  grid-template-areas:
+    "search weather"
+    "favorites weather"
+    "chart chart";
+}
+
+.search-bar {
+  grid-area: search;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  margin-right: 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background: #45a049;
+}
+
+.favorites {
+  grid-area: favorites;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.favorites h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.favorite-item span {
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.favorite-item span:hover {
+  color: #0056b3;
+}
+
+.favorite-item button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s;
+}
+
+.favorite-item button:hover {
+  background: #c82333;
+}
+
+.weather-card {
+  grid-area: weather;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.main-weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.main-weather img {
+  width: 80px;
+  height: 80px;
+}
+
+.temp-desc {
+  margin-left: 20px;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff7300;
+}
+
+.desc {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.detail-item span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.fav-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.fav-btn:hover {
+  background: #0056b3;
+}
+
+.forecast-chart {
+  grid-area: chart;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.forecast-chart h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "search"
+      "favorites"
+      "weather"
+      "chart";
+  }
+
+  .App h1 {
+    font-size: 2rem;
+  }
+
+  .search-bar input {
+    width: 60%;
+  }
+
+  .weather-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-item {
+    margin-bottom: 10px;
+  }
+}
